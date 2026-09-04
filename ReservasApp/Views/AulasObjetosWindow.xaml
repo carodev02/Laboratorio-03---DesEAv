@@ -1,0 +1,92 @@
+﻿<Window x:Class="ReservasApp.Views.AulasObjetosWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Aulas - Objetos"
+        Height="600"
+        Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F1FA">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- CABECERA -->
+        <StackPanel>
+            <TextBlock Text="Aulas"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="#2F2140"/>
+
+            <TextBlock Text="Consulta conectada usando objetos Aula"
+                       FontSize="14"
+                       Foreground="#8A8094"
+                       Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <!-- BUSCADOR -->
+        <Border Grid.Row="1"
+                Background="White"
+                CornerRadius="14"
+                Padding="18"
+                Margin="0,22,0,18">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="txtBuscar"
+                         Height="42"
+                         FontSize="14"
+                         Padding="12,0"
+                         VerticalContentAlignment="Center"
+                         Background="#FAF8FC"
+                         BorderBrush="#D8CDE1"
+                         BorderThickness="1"
+                         Margin="0,0,12,0"/>
+
+                <Button Grid.Column="1"
+                        Content="Buscar"
+                        Height="42"
+                        Click="Buscar_Click"
+                        Background="#6C3A91"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"/>
+            </Grid>
+
+        </Border>
+
+        <!-- TABLA -->
+        <Border Grid.Row="2"
+                Background="White"
+                CornerRadius="18"
+                Padding="20">
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15"
+                                  ShadowDepth="2"
+                                  Opacity="0.12"/>
+            </Border.Effect>
+
+            <DataGrid x:Name="dgAulas"
+                      AutoGenerateColumns="True"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      GridLinesVisibility="Horizontal"
+                      RowHeight="38"
+                      BorderThickness="0"
+                      Background="White"
+                      AlternatingRowBackground="#F8F4FB"/>
+        </Border>
+
+    </Grid>
+
+</Window>

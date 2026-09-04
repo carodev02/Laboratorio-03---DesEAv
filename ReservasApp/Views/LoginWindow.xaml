@@ -1,0 +1,222 @@
+﻿<Window x:Class="ReservasApp.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sistema de Reservas"
+        Height="520"
+        Width="820"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F5F1FA">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- PANEL IZQUIERDO -->
+        <Border Grid.Column="0"
+                Background="#5B2A86"
+                CornerRadius="0,28,28,0">
+
+            <Grid Margin="45">
+
+                <StackPanel VerticalAlignment="Center">
+
+                    <Border Width="70"
+                            Height="70"
+                            CornerRadius="20"
+                            Background="#7C4D9E"
+                            HorizontalAlignment="Left"
+                            Margin="0,0,0,28">
+
+                        <TextBlock Text="R"
+                                   Foreground="White"
+                                   FontSize="32"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+
+                    <TextBlock Text="Sistema de"
+                               Foreground="White"
+                               FontSize="32"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock Text="Reservas"
+                               Foreground="White"
+                               FontSize="38"
+                               FontWeight="Bold"
+                               Margin="0,-3,0,15"/>
+
+                    <TextBlock Text="Gestiona aulas y reservas de manera rápida, organizada y segura."
+                               Foreground="#E7DDF0"
+                               FontSize="15"
+                               TextWrapping="Wrap"
+                               Width="290"
+                               HorizontalAlignment="Left"
+                               LineHeight="23"/>
+
+                    <StackPanel Margin="0,35,0,0">
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,14">
+
+                            <Ellipse Width="9"
+                                     Height="9"
+                                     Fill="#D3B4E8"
+                                     VerticalAlignment="Center"
+                                     Margin="0,0,12,0"/>
+
+                            <TextBlock Text="Control de aulas"
+                                       Foreground="#F0E9F5"
+                                       FontSize="14"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,14">
+
+                            <Ellipse Width="9"
+                                     Height="9"
+                                     Fill="#D3B4E8"
+                                     VerticalAlignment="Center"
+                                     Margin="0,0,12,0"/>
+
+                            <TextBlock Text="Consulta de reservas"
+                                       Foreground="#F0E9F5"
+                                       FontSize="14"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <Ellipse Width="9"
+                                     Height="9"
+                                     Fill="#D3B4E8"
+                                     VerticalAlignment="Center"
+                                     Margin="0,0,12,0"/>
+
+                            <TextBlock Text="Acceso seguro"
+                                       Foreground="#F0E9F5"
+                                       FontSize="14"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+        <!-- PANEL DERECHO -->
+        <Grid Grid.Column="1">
+
+            <Border Background="White"
+                    CornerRadius="22"
+                    Margin="38"
+                    Padding="35">
+
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="18"
+                                      ShadowDepth="3"
+                                      Opacity="0.14"/>
+                </Border.Effect>
+
+                <StackPanel VerticalAlignment="Center">
+
+                    <TextBlock Text="Bienvenido"
+                               FontSize="29"
+                               FontWeight="Bold"
+                               Foreground="#2F2140"/>
+
+                    <TextBlock Text="Ingresa tus credenciales para continuar"
+                               FontSize="14"
+                               Foreground="#8A8094"
+                               Margin="0,6,0,30"/>
+
+                    <!-- USUARIO -->
+                    <TextBlock Text="Usuario"
+                               FontSize="13"
+                               FontWeight="SemiBold"
+                               Foreground="#493B57"
+                               Margin="0,0,0,7"/>
+
+                    <Border BorderBrush="#DDD3E5"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            Background="#FAF8FC"
+                            Height="46"
+                            Margin="0,0,0,20">
+
+                        <TextBox x:Name="txtUsuario"
+                                 BorderThickness="0"
+                                 Background="Transparent"
+                                 FontSize="15"
+                                 Foreground="#362A40"
+                                 VerticalContentAlignment="Center"
+                                 Padding="14,0"/>
+                    </Border>
+
+                    <!-- CONTRASEÑA -->
+                    <TextBlock Text="Contraseña"
+                               FontSize="13"
+                               FontWeight="SemiBold"
+                               Foreground="#493B57"
+                               Margin="0,0,0,7"/>
+
+                    <Border BorderBrush="#DDD3E5"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            Background="#FAF8FC"
+                            Height="46"
+                            Margin="0,0,0,28">
+
+                        <PasswordBox x:Name="txtPassword"
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     FontSize="15"
+                                     Foreground="#362A40"
+                                     VerticalContentAlignment="Center"
+                                     Padding="14,0"/>
+                    </Border>
+
+                    <!-- BOTÓN -->
+                    <Button Content="Ingresar"
+                            Height="48"
+                            Click="Ingresar_Click"
+                            Foreground="White"
+                            FontSize="15"
+                            FontWeight="SemiBold"
+                            Cursor="Hand">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+
+                                <Border Background="#6C3A91"
+                                        CornerRadius="11">
+
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center"/>
+                                </Border>
+
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <TextBlock Text="Sistema de gestión de reservas"
+                               FontSize="12"
+                               Foreground="#A39AAA"
+                               HorizontalAlignment="Center"
+                               Margin="0,24,0,0"/>
+
+                </StackPanel>
+
+            </Border>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

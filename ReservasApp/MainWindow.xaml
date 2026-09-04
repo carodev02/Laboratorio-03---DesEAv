@@ -1,0 +1,180 @@
+﻿<Window x:Class="ReservasApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sistema de Reservas"
+        Height="600"
+        Width="950"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F1FA">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- MENÚ LATERAL -->
+        <Border Grid.Column="0"
+                Background="#5B2A86">
+
+            <StackPanel Margin="22">
+
+                <TextBlock Text="ReservasApp"
+                           Foreground="White"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Margin="5,15,0,35"/>
+
+                <Button Content="Aulas - DataTable"
+                        Height="46"
+                        Margin="0,0,0,12"
+                        Foreground="White"
+                        Background="#72469A"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="AulasDataTable_Click"/>
+
+                <Button Content="Aulas - Objetos"
+                        Height="46"
+                        Margin="0,0,0,12"
+                        Foreground="White"
+                        Background="#72469A"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="AulasObjetos_Click"/>
+
+                <Button Content="Reservas - DataTable"
+                        Height="46"
+                        Margin="0,0,0,12"
+                        Foreground="White"
+                        Background="#72469A"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="ReservasDataTable_Click"/>
+
+                <Button Content="Reservas - Objetos"
+                        Height="46"
+                        Margin="0,0,0,12"
+                        Foreground="White"
+                        Background="#72469A"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="ReservasObjetos_Click"/>
+
+                <Button Content="Nueva Reserva"
+                        Height="46"
+                        Foreground="White"
+                        Background="#8B5FBF"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="NuevaReserva_Click"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <!-- CONTENIDO -->
+        <Grid Grid.Column="1"
+              Margin="35">
+
+            <StackPanel>
+
+                <TextBlock Text="Panel principal"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Foreground="#2F2140"/>
+
+                <TextBlock Text="Gestiona aulas y reservas desde un solo lugar"
+                           FontSize="15"
+                           Foreground="#8A8094"
+                           Margin="0,6,0,30"/>
+
+                <UniformGrid Columns="2"
+                             Rows="2">
+
+                    <Border Background="White"
+                            CornerRadius="15"
+                            Margin="8"
+                            Padding="22">
+
+                        <StackPanel>
+                            <TextBlock Text="Aulas"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="#5B2A86"/>
+
+                            <TextBlock Text="Consulta las aulas disponibles y su capacidad."
+                                       Foreground="#777"
+                                       Margin="0,10,0,0"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Background="White"
+                            CornerRadius="15"
+                            Margin="8"
+                            Padding="22">
+
+                        <StackPanel>
+                            <TextBlock Text="Reservas"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="#5B2A86"/>
+
+                            <TextBlock Text="Revisa las reservas registradas en el sistema."
+                                       Foreground="#777"
+                                       Margin="0,10,0,0"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Background="White"
+                            CornerRadius="15"
+                            Margin="8"
+                            Padding="22">
+
+                        <StackPanel>
+                            <TextBlock Text="Nueva Reserva"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="#5B2A86"/>
+
+                            <TextBlock Text="Registra una nueva reserva de aula."
+                                       Foreground="#777"
+                                       Margin="0,10,0,0"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Background="White"
+                            CornerRadius="15"
+                            Margin="8"
+                            Padding="22">
+
+                        <StackPanel>
+                            <TextBlock Text="ADO.NET"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="#5B2A86"/>
+
+                            <TextBlock Text="Consultas conectadas y desconectadas."
+                                       Foreground="#777"
+                                       Margin="0,10,0,0"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
